@@ -20,7 +20,7 @@ This tool works in cases where the WAF does not limit the size of POST/PUT/PATCH
 - [ ] Support XML requests.
 
 # Installation
-xxx
+https://docs.mitmproxy.org/stable/overview-installation/
 
 # Configuration
 xxx
