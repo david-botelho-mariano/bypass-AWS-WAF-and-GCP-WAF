@@ -23,7 +23,9 @@ This tool works in cases where the WAF does not limit the size of POST/PUT/PATCH
 https://docs.mitmproxy.org/stable/overview-installation/
 
 # Configuration
-xxx
+mitmproxy --set block_global=false -s modify_request.py
+
+curl -x http://84.247.175.xxx:8080 -H "Content-Type: application/json" -d '{"foo":"bar"}' http://xopo91d41t.oastify.com/
 
 # Inspired by the following work:
 - https://github.com/assetnote/nowafpls
