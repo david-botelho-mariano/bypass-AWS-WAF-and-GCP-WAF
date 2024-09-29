@@ -1,4 +1,4 @@
-# Bypass top tiers WAF with junk
+# Bypass waf top tier through junk
 This tool works in cases where the WAF does not limit the size of POST/PUT/PATCH/DELETE type requests. It works on the following WAF services:
 - [X] AWS WAF.
 - [X] GCP WAF (Google cloud armor).
