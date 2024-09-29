@@ -14,9 +14,14 @@ This tool works in cases where the WAF does not limit the size of POST/PUT/PATCH
 
 
 # TO-DO
+- [X] Support JSON requests.
 - [ ] Support URL Encoded requests.
 - [ ] Support Multipart requests.
 - [ ] Support XML requests.
+
+# Installation
+
+# Configuration
 
 # Inspired by the following work:
 - https://github.com/assetnote/nowafpls
