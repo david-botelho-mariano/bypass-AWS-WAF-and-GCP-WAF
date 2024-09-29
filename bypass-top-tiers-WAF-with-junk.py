@@ -1,18 +1,22 @@
 from mitmproxy import http
 import json
+from collections import OrderedDict
 
 def request(flow: http.HTTPFlow) -> None:
-    # Only process requests with a JSON content-type
-    content_type = flow.request.headers.get("Content-Type", "")
-    if "application/json" in content_type:
-        # Decode the JSON body
+    # Check if the request is of type application/json
+    content_type = flow.request.headers.get('Content-Type', '')
+    
+    if 'application/json' in content_type:
         try:
-            data = json.loads(flow.request.get_text())
-        except json.JSONDecodeError:
-            return  # Not valid JSON, skip processing
-        
-        # Add the "x-secret" parameter
-        data["x-secret"] = "123456789"
-        
-        # Encode the JSON and set it as the new request body
-        flow.request.set_text(json.dumps(data))
+            # Attempt to parse the JSON body
+            body_json = json.loads(flow.request.text, object_pairs_hook=OrderedDict)
+        except Exception as e:
+            # Skip processing if there's an error in parsing JSON
+            print(f"Error processing JSON: {e}")
+            return
+
+        # Insert the new key-value pair at the top
+        new_body_json = OrderedDict([('daviMariano', '0' * 132000)] + list(body_json.items()))
+
+        # Convert JSON back to a string and update the request body
+        flow.request.text = json.dumps(new_body_json)
