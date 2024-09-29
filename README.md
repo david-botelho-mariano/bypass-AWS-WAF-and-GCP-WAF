@@ -20,8 +20,10 @@ This tool works in cases where the WAF does not limit the size of POST/PUT/PATCH
 - [ ] Support XML requests.
 
 # Installation
+xxx
 
 # Configuration
+xxx
 
 # Inspired by the following work:
 - https://github.com/assetnote/nowafpls
