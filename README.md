@@ -23,9 +23,12 @@ This tool works in cases where the WAF does not limit the size of POST/PUT/PATCH
 https://docs.mitmproxy.org/stable/overview-installation/
 
 # Configuration
-mitmproxy --set block_global=false -s modify_request.py
 
-curl -x http://84.247.175.xxx:8080 -H "Content-Type: application/json" -d '{"foo":"bar"}' http://xopo91d41t.oastify.com/
+1) git clone https://github.com/david-botelho-mariano/bypass-top-tier-WAF-through-junk/
+2) cd bypass-top-tier-WAF-through-junk
+3) docker run --rm -it -v "./bypass-top-tiers-WAF-with-junk.py:/bypass-top-tiers-WAF-with-junk.py" -p 1234:1234 mitmproxy/mitmproxy mitmproxy -p 1234 -s /bypass-top-tiers-WAF-with-junk.py
+
+4) curl -x http://127.0.1:1234 -H "Content-Type: application/json" -d '{"foo":"bar"}' https://public.requestbin.com/r/en5tykm755uhh
 
 # Inspired by the following work:
 - https://github.com/assetnote/nowafpls
