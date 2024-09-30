@@ -13,10 +13,10 @@ This bypass tool works in cases where the WAF does not limit the size of POST/PU
 - [X] Palo Alto
 
 # TO-DO
-- [X] Support JSON requests.
-- [ ] Support URL Encoded requests.
-- [ ] Support Multipart requests.
-- [ ] Support XML requests.
+- [X] Support JSON requests
+- [ ] Support URL Encoded requests
+- [ ] Support Multipart requests
+- [ ] Support XML requests
 
 # Installation and configuration
 
