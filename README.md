@@ -26,7 +26,7 @@ This bypass tool works in cases where the WAF does not limit the size of POST/PU
 4) Configure your tool to use the following proxy: "http://127.0.0.1:1234". For example:
     1) `curl -x http://127.0.0.1:1234 -H "Content-Type: application/json" -d '{"foo":"bar"}' https://public.requestbin.com/r/en5tykm755uhh`
     2) `sqlmap -u "http://example.com/vulnerable_page.php?id=1" --proxy "http://127.0.0.1:1234"`
-    3) In burp suite: <img width="1440" alt="image" src="https://github.com/user-attachments/assets/0af30b85-6c5e-447e-91e2-ca7da7f06b12">
+    3) Configuration for Burp Suite: <img width="1440" alt="image" src="https://github.com/user-attachments/assets/0af30b85-6c5e-447e-91e2-ca7da7f06b12">
 
 
 # Inspired by the following work:
