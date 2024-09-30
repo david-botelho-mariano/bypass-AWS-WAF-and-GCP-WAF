@@ -1,16 +1,16 @@
 # Bypass top tier WAF through junk
 This bypass tool works in cases where the WAF does not limit the size of POST/PUT/PATCH/DELETE type requests. It works on the following WAF services:
-- [X] AWS WAF.
-- [X] GCP WAF (Google cloud armor).
-- [X] Cloudflare.
-- [X] Akamai.
-- [X] Azure WAF.
-- [X] Fortiweb by Fortinet.
-- [X] Barracuda WAF.
-- [X] Sucuri.
-- [X] Radware AppWall.
-- [X] F5 BIG-IP WAAP.
-- [X] Palo Alto.
+- [X] AWS WAF
+- [X] GCP WAF (Google cloud armor)
+- [X] Cloudflare
+- [X] Akamai
+- [X] Azure WAF
+- [X] Fortiweb by Fortinet
+- [X] Barracuda WAF
+- [X] Sucuri
+- [X] Radware AppWall
+- [X] F5 BIG-IP WAAP
+- [X] Palo Alto
 
 # TO-DO
 - [X] Support JSON requests.
